@@ -1,57 +1,39 @@
 import React from "react";
 import "./styles.css";
 
-const impactHighlights = [
+const highlights = [
   {
-    title: "SaaS Communication Platform",
-    summary:
-      "Delivered personal and group messaging, plus one-on-one and group audio/video calling flows across a multi-module SaaS product to support real-time collaboration.",
+    title: "Backend-first mindset",
+    description:
+      "I design APIs and services that stay reliable under real-world pressure, with a focus on security, observability, and clean data flow.",
   },
   {
-    title: "iVerify (Adamawa State)",
-    summary:
-      "Built backend services that verified 60,000+ civil servants with facial capture, BVN, and NIN matching. Implemented validation logic to flag inconsistencies and strengthen payroll integrity.",
+    title: "Multi-tenant experience",
+    description:
+      "I’ve built systems where users belong to multiple organizations with role-aware access control and context switching.",
   },
   {
-    title: "Adashe Multi-Tenancy",
-    summary:
-      "Architected authentication and organization switching for cooperative societies, enabling users to access multiple memberships with context-aware permissions.",
-  },
-];
-
-const backendFocus = [
-  "Backend architecture & API design",
-  "Identity verification pipelines",
-  "Multi-tenant authorization",
-  "Real-time communication services",
-  "Scalable pagination & filtering",
-  "Secure data handling",
-  "Query optimization & performance",
-  "System documentation & reliability",
-];
-
-const stories = [
-  {
-    title: "Reusable Pagination & Filtering",
-    detail:
-      "Adapted the Java JPA Specification concept into a TypeORM utility with decorator-driven metadata, enabling consistent filtered queries across entities and parameterized protection against SQL injection.",
-  },
-  {
-    title: "Authorization Lessons in Multi-Tenancy",
-    detail:
-      "Learned that fetching roles per request can slow authorization. The next iteration would embed organization context and roles into tokens after a two-step login flow.",
-  },
-  {
-    title: "Growing Into Fullstack",
-    detail:
-      "Learning React to pair backend depth with frontend delivery, contributing to full feature ownership while keeping systems clean and scalable.",
+    title: "Verification & compliance",
+    description:
+      "I’ve worked on identity verification pipelines that validate sensitive data at government scale.",
   },
 ];
 
-const contactLinks = [
-  { label: "GitHub", href: "https://github.com/owolagbadavid" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/owolagbadavid/" },
-  { label: "Resume", href: "https://resume.io/r/hCF6clbUL" },
+const focusAreas = [
+  "API design & service architecture",
+  "Authentication & authorization",
+  "Scalable data access",
+  "Secure identity integrations",
+  "Real-time communication",
+  "Pagination & filtering utilities",
+  "Observability & troubleshooting",
+  "Team collaboration",
+];
+
+const experience = [
+  "Contributed to a SaaS product’s communication module, delivering messaging and calling experiences across user scenarios.",
+  "Built backend services for a civil servant verification system used to validate 60,000+ staff records.",
+  "Designed authentication flows for a multi-tenant cooperative finance platform supporting multiple memberships.",
 ];
 
 const App = () => {
@@ -59,34 +41,45 @@ const App = () => {
     <div className="page">
       <header className="hero">
         <nav className="nav">
-          <span className="eyebrow">Backend systems & product delivery</span>
+          <span className="eyebrow">Backend engineering • Platform systems</span>
           <div className="nav-links">
-            {contactLinks.map((link) => (
-              <a
-                key={link.label}
-                className="nav-pill"
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {link.label}
-              </a>
-            ))}
+            <a className="nav-pill" href="/projects">
+              Projects
+            </a>
+            <a
+              className="nav-pill"
+              href="https://github.com/owolagbadavid"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              className="nav-pill"
+              href="https://www.linkedin.com/in/owolagbadavid/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </nav>
 
         <div className="hero-grid">
           <div className="hero-card">
-            <p className="role">Asohoudlmbe Software Engineer</p>
-            <h1>
-              Building backend systems that stay secure, resilient, and easy to
-              scale.
-            </h1>
+            <div className="hero-title">
+              <h1>David Owolagba</h1>
+              <p className="role">Software Engineer</p>
+            </div>
             <p className="hero-copy">
-              I focus on backend engineering for fintech, public sector
-              verification, and multi-tenant platforms. My work blends clean API
-              design, data integrity, and scalable architecture that keeps
-              products dependable under real-world pressure.
+              I’m a backend-focused software engineer who enjoys building secure,
+              scalable systems and turning complex workflows into reliable
+              products. I care about thoughtful architecture, clear data models,
+              and delivering features that teams can grow confidently.
+            </p>
+            <p className="hero-copy">
+              Recently, I’ve been learning React to broaden my skill set and
+              collaborate more effectively across frontend and backend teams.
             </p>
             <div className="cta-row">
               <a className="button primary" href="mailto:owolagbadavid@gmail.com">
@@ -99,14 +92,13 @@ const App = () => {
           </div>
 
           <div className="hero-card secondary">
-            <h2>Backend Focus</h2>
+            <h2>Focus Areas</h2>
             <p className="hero-copy">
-              I specialize in building backend features that enable real-time
-              collaboration, identity verification, and multi-tenant financial
-              services. Here are the capabilities I bring to every engagement.
+              I focus on backend systems that are secure, maintainable, and ready
+              to scale in fast-moving product environments.
             </p>
             <div className="badge-grid">
-              {backendFocus.map((skill) => (
+              {focusAreas.map((skill) => (
                 <span className="badge" key={skill}>
                   {skill}
                 </span>
@@ -118,17 +110,17 @@ const App = () => {
 
       <section className="section">
         <div className="section-title">
-          <h2>Impact Highlights</h2>
+          <h2>Highlights</h2>
           <p>
-            Recent backend work that blends technical depth with measurable
-            outcomes.
+            A quick snapshot of the kind of engineering work I enjoy and the
+            systems I build.
           </p>
         </div>
         <div className="card-grid">
-          {impactHighlights.map((item) => (
+          {highlights.map((item) => (
             <article className="card" key={item.title}>
               <h3>{item.title}</h3>
-              <p>{item.summary}</p>
+              <p>{item.description}</p>
             </article>
           ))}
         </div>
@@ -136,43 +128,42 @@ const App = () => {
 
       <section className="section">
         <div className="section-title">
-          <h2>Backend Engineering Stories</h2>
+          <h2>Experience Snapshot</h2>
           <p>
-            Approaches and lessons that shaped how I design robust backend
-            systems.
+            Selected experiences that shaped how I design and deliver backend
+            platforms.
           </p>
         </div>
-        <div className="story-list">
-          {stories.map((story) => (
-            <article className="story" key={story.title}>
-              <h4>{story.title}</h4>
-              <p>{story.detail}</p>
-            </article>
+        <div className="list">
+          {experience.map((item) => (
+            <div className="list-item" key={item}>
+              <span className="dot" />
+              <p>{item}</p>
+            </div>
           ))}
         </div>
       </section>
 
       <section className="section">
         <div className="section-title">
-          <h2>Why Fintech & Platform Teams</h2>
+          <h2>Looking Ahead</h2>
           <p>
-            My background spans cooperative finance, government identity
-            verification, and multi-module SaaS. I thrive where the stakes are
-            high and backend reliability matters most.
+            I’m excited about opportunities where backend quality, security, and
+            thoughtful engineering make a visible impact.
           </p>
         </div>
         <article className="card wide">
           <p>
-            I&apos;m driven by building systems that protect financial integrity and
-            improve user trust. I&apos;m excited to partner with teams that value
-            strong backend foundations and thoughtful security trade-offs.
+            Whether it’s fintech, public sector platforms, or SaaS products, I
+            like working with teams that value clean architecture and dependable
+            delivery.
           </p>
         </article>
       </section>
 
       <footer className="footer">
         <span>Open to backend &amp; platform roles</span>
-        <span>© 2025 Asohoudlmbe</span>
+        <span>© 2025 David Owolagba</span>
       </footer>
     </div>
   );

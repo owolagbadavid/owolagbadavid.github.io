@@ -98,11 +98,17 @@ a {
   background: var(--panel-strong);
 }
 
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .role {
   color: var(--accent);
   font-weight: 600;
   font-size: 14px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -210,28 +216,25 @@ a {
   max-width: 720px;
 }
 
-.story-list {
+.list {
   display: grid;
-  gap: 16px;
+  gap: 12px;
 }
 
-.story {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 20px;
+.list-item {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.story h4 {
-  font-size: 16px;
-}
-
-.story p {
+  gap: 12px;
+  align-items: flex-start;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  margin-top: 8px;
 }
 
 .footer {
