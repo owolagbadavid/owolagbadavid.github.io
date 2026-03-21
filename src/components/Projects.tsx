@@ -33,7 +33,7 @@ function Project() {
   return (
     <section className="bg-surface-container-low dark:bg-[#0a0a0a] py-32" id="work">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex md:flex-row justify-between items-end mb-20 gap-8">
           <div>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-[#000000] dark:text-[#ffffff] mb-4 uppercase">
               Selected Projects
