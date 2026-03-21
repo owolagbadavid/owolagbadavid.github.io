@@ -1,0 +1,31 @@
+name: Deploy Vite App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Vite Github Pages Deployer
+        uses: skywarth/vite-github-pages-deployer@v1.5.0
+        with:
+          install_phase_node_env: 'development'
+          build_phase_node_env: 'production'
+          package_manager: 'npm'
+          artifact_name: 'github-pages'
+          debug_mode: true
+          working_path: './'
