@@ -8,7 +8,7 @@ function Project() {
     {
       name: "Relay",
       description: `A microservice-based URL shortener leveraging a document-store backend and a standalone encoding service to achieve sub-millisecond lookups for custom and auto-generated links.`,
-      tools: [" Typescript/NestJS", "MongoDB", "Redis", "PostgreSQL"],
+      tools: ["Typescript/NestJS", "MongoDB", "Redis", "PostgreSQL"],
       link: "https://github.com/owolagbadavid/relay",
     },
     {
@@ -22,6 +22,12 @@ function Project() {
       description: `A high-granularity IAM service utilizing a custom RBAC/ReBAC hybrid model, achieving 100% resource isolation by intercepting global permissions with context-aware scoping logic.`,
       tools: ["Java/SpingBoot", "PostgreSQL"],
       link: "https://github.com/owolagbadavid/i-am",
+    },
+    {
+      name: "Qarth",
+      description: `A comprehensive e-commerce API supporting fixed-price and auction-based listings, with integrated end-to-end payment processing.`,
+      tools: ["Typescript/NestJS", "PostgreSQL"],
+      link: "https://github.com/owolagbadavid/Qarth",
     },
   ];
   return (
