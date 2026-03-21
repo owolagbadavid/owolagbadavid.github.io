@@ -1,437 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAVID | Portfolio - Home</title>
-    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="
-    https://cdn.jsdelivr.net/npm/particlesjs@2.2.3/dist/particles.min.js
-    "></script>
+<!doctype html>
 
-    <!-- Favicons -->
+<html class="light" lang="en">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" />
+    <link rel="manifest" href="/public/site.webmanifest" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TOBEE.DEV | Backend Engineer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/static/assets/favicon_io/apple-touch-icon.png"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
     />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/static/assets/favicon_io/favicon-32x32.png"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
     />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/static/assets/favicon_io/favicon-16x16.png"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
     />
-    <link rel="manifest" href="/static/assets/favicon_io/site.webmanifest" />
-    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#757474",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#5e5e5e",
+              "surface-container-lowest": "#ffffff",
+              tertiary: "#3b3b3b",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#1b1c1c",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-container-low": "#f3f3f3",
+              "on-surface-variant": "#474747",
+              "on-primary-fixed-variant": "#e2e2e2",
+              background: "#f9f9f9",
+              "secondary-container": "#d6d4d3",
+              "secondary-fixed": "#c8c6c6",
+              "on-error-container": "#410002",
+              "surface-variant": "#e2e2e2",
+              "surface-tint": "#5e5e5e",
+              "secondary-fixed-dim": "#acabaa",
+              "tertiary-fixed-dim": "#464747",
+              "primary-fixed": "#5e5e5e",
+              primary: "#000000",
+              outline: "#777777",
+              "outline-variant": "#c6c6c6",
+              "on-primary-container": "#ffffff",
+              "inverse-on-surface": "#f1f1f1",
+              secondary: "#5f5e5e",
+              "surface-bright": "#f9f9f9",
+              "on-tertiary": "#e4e2e2",
+              "inverse-primary": "#c6c6c6",
+              "surface-container": "#eeeeee",
+              "inverse-surface": "#303030",
+              "surface-dim": "#dadada",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#ffffff",
+              "primary-fixed-dim": "#474747",
+              "surface-container-highest": "#e2e2e2",
+              "on-tertiary-fixed-variant": "#e4e2e2",
+              "on-primary": "#e2e2e2",
+              "surface-container-high": "#e8e8e8",
+              "on-surface": "#1b1b1b",
+              "primary-container": "#3b3b3b",
+              "on-primary-fixed": "#ffffff",
+              "on-background": "#1b1b1b",
+              surface: "#f9f9f9",
+              "on-tertiary-container": "#ffffff",
+              error: "#ba1a1a",
+            },
+            fontFamily: {
+              headline: ["Manrope", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+              label: ["Inter", "sans-serif"],
+            },
+            borderRadius: { DEFAULT: "0px", lg: "0px", xl: "0px", full: "9999px" },
+          },
+        },
+      };
+    </script>
     <script>
-      window.onload = function () {
-          Particles.
-            init
-            ({
-
-              // normal options
-              selector:
-                '.background'
-              ,
-              color: ['#00008B', '#ffffff', '#e0ffff', '#c0c0c0', '#000039']
-              ,
-              connectParticles: true,
-              maxParticles: 200,
-              responsive: [
-                {
-                  breakpoint: 1024,
-                  options: {
-
-                    maxParticles: 130,
-                  }
-                },
-                {
-                  breakpoint: 800,
-                  options: {
-
-                    connectParticles: false,
-                  }
-                }
-                
-              ]
-              
-
-
-            });
-        };
+      (function () {
+        try {
+          var savedTheme = localStorage.getItem("theme");
+          var isDark = savedTheme === "dark";
+          document.documentElement.classList.toggle("dark", isDark);
+          document.documentElement.classList.toggle("light", !isDark);
+        } catch (error) {
+          document.documentElement.classList.add("light");
+        }
+      })();
     </script>
     <style>
-
-body {
-  font-family: 'Russo One', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #222;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  cursor: none;
-
-
-}
-
-main {
-  /* box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02); */
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: auto;
-  padding: 50px;
-}
-
-.intro {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: 300;
-    margin-bottom: 5px;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.cta {
-    color: #fff;
-    background-color: #333;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.2s ease-in-out,
-              box-shadow 0.3s ease-in-out,
-              transform 0.4s ease-in-out;
-}
-
-.cta:hover {
-  /* Choose your preferred hover effect(s) from the options above */
-  background-color: #444; /* Subtle color change */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add depth */
-  transform: scale(1.05); /* Subtle animation */
-}
-
-.skills {
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center; /* Centers the entire skill set horizontally */
-  gap: 10px; /* Adjust spacing between skills */
-}
-
-.skill  {
-  padding: 5px 10px; /* Adds padding for breathing space */
-  background-color: #333; /* Optional */
-  border-radius: 5px; /* Optional */
-  text-align: center; /* Centers text within each skill */
-}
-
-.contact-link {
-  padding: 5px 10px; /* Adds padding for breathing space */
-  background-color: #333; /* Optional */
-  border-radius: 5px; /* Optional */
-  text-align: center; /* Centers text within each skill */
-}
-
-
-.cta-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  padding: 50px;
-
-    
-}
-
-.dropdown-menu , .dropdown-menu2{
-  display: none; /* Hide the menu initially */
-  position: relative; /* Use relative positioning */
-  bottom: 100%; /* Position below the button with a 100% gap */
-  left: 50%;
-  transform: translateX(-50%); /* Center the menu horizontally */
-  background-color: #222;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  justify-content: center;
-
-}
-
-.dropdown-menu.show , .dropdown-menu2.show{
-  display: flex; /* Show the menu when the `.show` class is added */
-  opacity: 1;
-}
-
-.dropdown-menu a , .dropdown-menu2 a{
-  display: inline-block; /* Keep links on one line */
-  margin: 0 5px; /* Add spacing between icons */
-}
-
-
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Place the canvas behind all other elements */
-
-  
-}
-
-
-
-
-.hover-this {
-  transition: all 0.3s ease;
-}
-
-.cursor {
-  pointer-events: none;
-  position: fixed;
-  padding: 0.3rem;
-  background-color: #fff;
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  transition: transform 0.3s ease;
-  z-index: 9999;
-}
-
-
-
-
-.hover-this:hover {
-  transform: scale(2);
-}
-
-span {
-  display: inline-block;
-  font-family: 'Russo One', sans-serif;
-  font-weight: 400;
-  color: #fff;
-  font-size: 36px;
-  text-transform: uppercase;
-  transition: transform 0.1s linear;
-}
-
-@media screen and (max-width: 768px) {
-  span {
-    font-size: 15px;
-    font-weight: 250;
-  }
-
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 10px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-
-
-    
-}
-
-.dropdown-menu {
-  display: none; /* Hide the menu initially */
-  position: relative; /* Use relative positioning */
-  bottom: 100%; /* Position below the button with a 100% gap */
-  left: 50%;
-  transform: translateX(-50%); /* Center the menu horizontally */
-  background-color: #222;
-  padding: 7px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  justify-content: center;
-
-}
-
-
-.dropdown-menu a {
-  display: inline-block; /* Keep links on one line */
-  margin: 0 3px; /* Add spacing between icons */
-}
-
-main {
-  /* box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02); */
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: auto;
-  padding: 30px;
-}
-
-.intro {
-  margin-bottom: 15px ;
-}
-.skills {
-  margin-top: auto;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center; /* Centers the entire skill set horizontally */
-  gap: 7px; /* Adjust spacing between skills */
-}
-
-.skill  {
-  padding: 3px 8px; /* Adds padding for breathing space */
-  background-color: #333; /* Optional */
-  border-radius: 5px; /* Optional */
-  text-align: center; /* Centers text within each skill */
-}
-
-h1 {
-  margin-bottom: 2px;
-}
-p {
-  line-height: 1;
-  margin-top: auto;
-}
-  
-}
-
-@media screen and (max-width: 400px) {
-  span {
-    font-size: 10px;
-    font-weight: 100;
-  }
-}
-
-
-
-
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 300,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Manrope", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
     </style>
-</head>
-<body >
-  <div class="cursor"></div>
-
-    <main>
-        <section class="intro">
-            <h1 class="hover-this"><span >David Owolagba</span></h1>
-            <p class="hover-this"><span >Software Engineer</span></p>
-            <div class="cta-wrapper">
-            <a href="#" class="cta">Contact Me</a>
-            
-          </div>
-          <div class="dropdown-menu">
-            <a href="https://github.com/owolagbadavid" target="_blank" class="contact-link cta" ><span><iconify-icon icon="devicon:github"></iconify-icon></span></a>
-            <a href="https://www.linkedin.com/in/owolagbadavid/" target="_blank" class="contact-link cta"><span><iconify-icon icon="devicon:linkedin"></iconify-icon></span></a>
-            <a href="https://twitter.com/oreosinit" target="_blank" class="contact-link cta"><span><iconify-icon icon="devicon:twitter"></iconify-icon></span></a>
-          </div>
-        </section>
-        <section class="skills">
-          <div class="skill hover-this"><span><iconify-icon icon="devicon-plain:nodejs-wordmark"></iconify-icon></span></div>
-          <div class="skill hover-this"><span><iconify-icon icon="simple-icons:dotnet"></iconify-icon></span></div>
-          <div class="skill hover-this"><span><iconify-icon icon="cib:typescript"></iconify-icon></span></div>
-          <div class="skill hover-this"><span><iconify-icon icon="devicon-plain:csharp"></iconify-icon></span></div>
-          <div class="skill hover-this"><span><iconify-icon icon="lineicons:aws"></iconify-icon></span></div>
-          <div class="skill hover-this"><span><iconify-icon icon="devicon-plain:docker-wordmark"></iconify-icon></span></div>
-        </section>
-        <section class="cta-wrapper">
-            <a href="#" class="cta cta2">Explore My Work</a>
-        </section>
-        <div class="dropdown-menu2">
-          <a href="https://resume.io/r/hCF6clbUL" target="_blank" class="contact-link cta"><span><iconify-icon icon="academicons:cv"></iconify-icon></span></a>
-          <a href="/projects" class="contact-link cta" ><span><iconify-icon icon="pajamas:work"></iconify-icon></span></a>
-
-        </div>
-
-        <footer>
-          <p class="hover-this"><span style="font-size: medium;">&copy; Oreosinit 2025</span></p>
-      </footer>
-        
-    </main>
-
-    <canvas class="background" ></canvas>
-
-
-
-<script>
-  const ctaButton = document.querySelector('.cta');
-const dropdownMenu = document.querySelector('.dropdown-menu');
-
-ctaButton.addEventListener('click', () => {
-  dropdownMenu.classList.toggle('show');
-});
-
-const ctaButton2 = document.querySelector('.cta2');
-const dropdownMenu2 = document.querySelector('.dropdown-menu2');
-
-ctaButton2.addEventListener('click', () => {
-  dropdownMenu2.classList.toggle('show');
-});
-
-
-(function () {
-
-const link = document.querySelectorAll('.hover-this');
-const cursor = document.querySelector('.cursor');
-
-const animateit = function (e) {
-      const span = this.querySelector('span');
-      const { offsetX: x, offsetY: y } = e,
-      { offsetWidth: width, offsetHeight: height } = this,
-
-      move = 25,
-      xMove = x / width * (move * 2) - move,
-      yMove = y / height * (move * 2) - move;
-
-      span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-
-      if (e.type === 'mouseleave') span.style.transform = '';
-};
-
-const editCursor = e => {
-      const { clientX: x, clientY: y } = e;
-      cursor.style.left = x + 'px';
-      cursor.style.top = y + 'px';
-};
-
-link.forEach(b => b.addEventListener('mousemove', animateit));
-link.forEach(b => b.addEventListener('mouseleave', animateit));
-
-link.forEach(b => b.addEventListener('mouseover', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(8)';
-  }));
-
-  // Optional: Add event listener for mouseleave to reset the cursor
-  link.forEach(b => b.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%, -50%)'; // Or whatever default transform you want
-  }));
-window.addEventListener('mousemove', editCursor);
-
-})();
-
-
-
-
-</script>
-
-</body>
+  </head>
+  <body
+    class="bg-background text-on-background dark:bg-[#000000] dark:text-[#f1f1f1] selection:bg-primary selection:text-on-primary"
+  >
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
