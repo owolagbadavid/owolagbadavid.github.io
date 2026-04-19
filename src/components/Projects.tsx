@@ -24,10 +24,10 @@ function Project() {
       link: "https://github.com/owolagbadavid/i-am",
     },
     {
-      name: "Qarth",
-      description: `A comprehensive e-commerce API supporting fixed-price and auction-based listings, with integrated end-to-end payment processing.`,
-      tools: ["Typescript/NestJS", "PostgreSQL"],
-      link: "https://github.com/owolagbadavid/Qarth",
+      name: "Diffr",
+      description: `A developer productivity tool that optimizes pull request workflows by implementing custom diff-view logic, allowing users to prioritize code reviews through multi-parameter sorting (e.g., file size, impact, or file type).`,
+      tools: ["Typescript", "Go"],
+      link: "https://github.com/owolagbadavid/diffr",
     },
   ];
   return (
