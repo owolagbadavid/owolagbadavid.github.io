@@ -10,9 +10,9 @@ function Home() {
           SYSTEMS.
         </h1>
         <p className="text-lg md:text-xl text-on-surface-variant dark:text-[#a3a3a3] leading-relaxed font-body max-w-2xl">
-          Specializing in distributed architectures, API design, and high-performance cloud
-          infrastructure. Building the invisible logic that powers the world's most demanding
-          applications.
+          Specializing in scalable backend systems, modern software architecture, and distributed
+          cloud environments. Building production systems designed for reliability, performance, and
+          scale
         </p>
         <div className="mt-16 flex flex-wrap gap-4">
           <span className="bg-secondary-container text-on-secondary-container dark:bg-[#1a1a1a] dark:text-[#d6d6d6] px-3 py-1 text-[0.65rem] font-bold uppercase tracking-widest">
