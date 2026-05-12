@@ -8,7 +8,7 @@ function Experience() {
   }[] = [
     {
       period: "2024 - PRESENT",
-      role: "Backend Egineer",
+      role: "Backend Engineer",
       company: "I-Tech Platform Limited",
       description: `Implemented APIs for secure identity verification, transaction processing, revenue management, workflow automation, and analytics, improving operational efficiency and visibility.`,
       points: [
