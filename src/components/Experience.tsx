@@ -7,7 +7,7 @@ function Experience() {
     points?: string[];
   }[] = [
     {
-      period: "2024 - PRESENT",
+      period: "Dec 2024 - PRESENT",
       role: "Backend Engineer",
       company: "I-Tech Platform Limited",
       description: `Implemented APIs for secure identity verification, transaction processing, revenue management, workflow automation, and analytics, improving operational efficiency and visibility.`,
@@ -18,13 +18,13 @@ function Experience() {
       ],
     },
     {
-      period: "2025",
+      period: "May 2025 - Sep 2025",
       role: "Software Engineer",
       company: "Map Systems Inc.",
       description: `Developed the communication module for a medical SaaS platform using WebSockets, covering real-time chat, one-on-one and group audio and video call for internal staff coordination and doctor-patient interaction`,
     },
     {
-      period: "2023",
+      period: "Mar 2023 - Sept 2023",
       role: "Backend Developer - Intern",
       company: "PHIS3",
       description: `Designed and implemented a backend system to streamline internal financial and administrative processes for a health informatics organization.
