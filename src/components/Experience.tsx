@@ -12,21 +12,23 @@ function Experience() {
       company: "I-Tech Platform Limited",
       description: `Implemented APIs for secure identity verification, transaction processing, revenue management, workflow automation, and analytics, improving operational efficiency and visibility.`,
       points: [
-        `Developed the API for iVerify, a platform that enables organizations to verify employee information efficiently and accurately.`,
-        `Developing Adashe, a system that streamlines cooperative society operations such as member onboarding, revenue management, and more.`,
+        `Refactored the data access layer of legacy services, cutting average query times by ~50% and eliminating multiple N+1 query patterns across core workflows.`,
+        `Built the core service layer for iVerify, an employee verification platform that has processed over 60,000 employee verifications across client organizations.`,
+        `Built the engine powering Adashe, a cooperative society management platform that has onboarded over 2,000 members across its operations.`,
       ],
     },
     {
       period: "2025",
       role: "Software Engineer",
       company: "Map Systems Inc.",
-      description: ` Developed communication infrastructure for a SaaS platform, providing messaging, calling, and other live interaction capabilities.`,
+      description: `Developed the communication module for a medical SaaS platform using WebSockets, covering real-time chat, one-on-one and group audio and video call for internal staff coordination and doctor-patient interaction`,
     },
     {
       period: "2023",
       role: "Backend Developer - Intern",
       company: "PHIS3",
-      description: ` Designed and implemented a backend system for an in-house project that streamlined the financial and administrative processes within the organisation.`,
+      description: `Designed and implemented a backend system to streamline internal financial and administrative processes for a health informatics organization.
+                    Contributed to medical terminology standardization using OCL, mapping health terminologies and their relationships into a structured, queryable format for cross-entity use.`,
     },
   ];
   return (
@@ -40,7 +42,10 @@ function Experience() {
         </div>
         <div className="space-y-24">
           {experiences.map((e) => (
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start" key={`${e.company}-${e.period}`}>
+            <div
+              className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
+              key={`${e.company}-${e.period}`}
+            >
               <div className="md:col-span-3">
                 <span className="text-on-surface-variant dark:text-[#a3a3a3] font-label font-bold text-sm tracking-widest uppercase">
                   {e.period}
@@ -48,7 +53,9 @@ function Experience() {
               </div>
               <div className="md:col-span-9 flex flex-col gap-6">
                 <div className="flex justify-between items-baseline flex-wrap gap-4">
-                  <h3 className="text-3xl font-bold text-[#000000] dark:text-[#ffffff]">{e.role}</h3>
+                  <h3 className="text-3xl font-bold text-[#000000] dark:text-[#ffffff]">
+                    {e.role}
+                  </h3>
                   <span className="text-lg font-medium italic text-[#474747] dark:text-[#a3a3a3]">
                     {e.company}
                   </span>
@@ -60,7 +67,9 @@ function Experience() {
                   {e.points?.map((p) => (
                     <li className="flex gap-4 items-start" key={p}>
                       <span className="mt-1 material-symbols-outlined text-sm">terminal</span>
-                      <span className="text-on-surface-variant dark:text-[#a3a3a3] text-sm font-body">{p}</span>
+                      <span className="text-on-surface-variant dark:text-[#a3a3a3] text-sm font-body">
+                        {p}
+                      </span>
                     </li>
                   ))}
                 </ul>
